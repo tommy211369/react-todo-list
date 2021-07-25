@@ -5,19 +5,32 @@ export default function InputTask({
   tabTasks,
   setNewTask,
   setTabTasks,
+  axios,
 }) {
   // input value updated
   const handleTextInput = (e) => {
     setNewTask(e.target.value);
   };
 
-  const handleAddTask = (e) => {
+  const handleAddTask = async (e) => {
     e.preventDefault();
     if (newTask) {
       const newTabTasks = [...tabTasks];
-      newTabTasks.push({ titleTask: newTask, checked: false });
+      const data = {
+        titleTask: newTask,
+        checked: false,
+        created: Date.now(),
+      };
+      newTabTasks.push(data);
       setTabTasks(newTabTasks);
       setNewTask("");
+
+      try {
+        const response = await axios.post("http://localhost:4000/tasks", data);
+        console.log(response);
+      } catch (error) {
+        alert(error);
+      }
     }
   };
 

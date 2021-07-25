@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import InputTask from "./components/InputTask";
 import TasksList from "./components/TasksList";
 import Footer from "./components/Footer";
+import axios from "axios";
 library.add(faTrashAlt, faListAlt);
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           tabTasks={tabTasks}
           setNewTask={setNewTask}
           setTabTasks={setTabTasks}
+          axios={axios}
         />
       </div>
       <Footer darkMode={darkMode} />
