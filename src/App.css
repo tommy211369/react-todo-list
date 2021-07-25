@@ -7,5 +7,26 @@
 
 .task-on {
   text-decoration: none;
-  background-color: white;
+}
+
+li {
+  width: max-content;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+label {
+  margin-left: 5px;
+  overflow: scroll;
+}
+
+.trash {
+  margin-left: 20px;
+}
+
+.trash:hover,
+button:hover,
+input[type="checkbox"]:hover {
+  cursor: pointer;
 }
