@@ -35,7 +35,7 @@ body {
 
 /* CONTENT */
 .content {
-  width: 70%;
+  width: 90%;
   height: 100vh;
   margin: 30px auto;
   text-align: center;
@@ -69,7 +69,8 @@ input:focus {
 }
 
 ul {
-  width: 50%;
+  width: 100%;
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -77,6 +78,8 @@ li {
   padding: 10px 30px 10px 30px;
   list-style-type: none;
   display: flex;
+  width: 100%;
+  background-color: blue;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
