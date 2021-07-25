@@ -29,7 +29,7 @@ export default function InputTask({
         const response = await axios.post("http://localhost:4000/tasks", data);
         console.log(response);
       } catch (error) {
-        alert(error);
+        alert(`${error} \nServeur en test`);
       }
     }
   };
