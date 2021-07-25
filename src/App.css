@@ -1,4 +1,100 @@
 /* Other rules */
+body {
+  font-family: "Dosis", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  padding: 20px 100px;
+  border-bottom: 3px solid grey;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header div {
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+  margin-left: 30px;
+}
+
+.todo-icon {
+  color: #5c48d3;
+  font-size: 50px;
+}
+
+/* CONTENT */
+.content {
+  width: 70%;
+  height: 100vh;
+  margin: 30px auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  height: 25px;
+  width: 40%;
+  font-size: 15px;
+  border-radius: 7px;
+  border: 1px solid #5c48d3;
+  padding: 5px 10px;
+  margin: 30px;
+}
+input:focus {
+  outline: none;
+}
+
+.content button {
+  padding: 15px;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  background-color: #5c48d3;
+  transition: background-color 0.2s ease;
+}
+
+.content button:hover {
+  background-color: #d2ccfc;
+}
+
+ul {
+  width: 50%;
+  margin: 0 auto;
+}
+
+li {
+  padding: 10px 30px 10px 30px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: #d2ccfc;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+}
+
+.content p {
+  margin: 0;
+  margin-left: 15px;
+}
 
 .task-off {
   text-decoration: line-through;
@@ -9,16 +105,8 @@
   text-decoration: none;
 }
 
-li {
-  width: max-content;
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-label {
-  margin-left: 5px;
-  overflow: scroll;
+.content p::-webkit-scrollbar {
+  display: none;
 }
 
 .trash {
@@ -29,4 +117,69 @@ label {
 button:hover,
 input[type="checkbox"]:hover {
   cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 20px;
+  color: white;
+  background-color: #5c48d3;
+  text-align: center;
+}
+
+.footer a,
+.footer-dark a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer a:hover,
+.footer-dark a:hover {
+  text-decoration: underline;
+}
+
+.footer-dark {
+  border-top: 2px solid grey;
+  padding: 20px;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  .header {
+    padding: 20px 0;
+    border-bottom: 3px solid grey;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header button {
+    margin-top: 30px;
+    width: 100px;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  input[type="text"] {
+    box-sizing: border-box;
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    margin: 20px auto;
+  }
+
+  .input-text button {
+    width: 100px;
+  }
 }
