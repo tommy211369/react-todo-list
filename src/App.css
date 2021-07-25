@@ -1,1 +1,11 @@
 /* Other rules */
+
+.task-off {
+  text-decoration: line-through;
+  background-color: grey;
+}
+
+.task-on {
+  text-decoration: none;
+  background-color: white;
+}
