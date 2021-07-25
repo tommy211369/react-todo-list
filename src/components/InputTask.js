@@ -11,26 +11,27 @@ export default function InputTask({
     setNewTask(e.target.value);
   };
 
+  const handleAddTask = (e) => {
+    e.preventDefault();
+    if (newTask) {
+      const newTabTasks = [...tabTasks];
+      newTabTasks.push({ titleTask: newTask, checked: false });
+      setTabTasks(newTabTasks);
+      setNewTask("");
+    }
+  };
+
   return (
     <div className="input-text">
-      <input
-        type="text"
-        placeholder="new task"
-        value={newTask}
-        onChange={handleTextInput}
-      />
-      <button
-        onClick={() => {
-          if (newTask) {
-            const newTabTasks = [...tabTasks];
-            newTabTasks.push({ titleTask: newTask, checked: false });
-            setTabTasks(newTabTasks);
-            setNewTask("");
-          }
-        }}
-      >
-        Add Task
-      </button>
+      <form onSubmit={handleAddTask}>
+        <input
+          type="text"
+          placeholder="new task"
+          value={newTask}
+          onChange={handleTextInput}
+        />
+        <button onClick={handleAddTask}>Add Task</button>
+      </form>
     </div>
   );
 }
