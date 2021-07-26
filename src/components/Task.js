@@ -13,6 +13,7 @@ export default function Task({
       <div className="task">
         <input
           value={task.checked}
+          checked={task.checked}
           type="checkbox"
           onChange={() => {
             if (task.checked === false) {
