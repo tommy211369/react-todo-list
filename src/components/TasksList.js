@@ -5,7 +5,6 @@ export default function TasksList({ tabTasks, setTabTasks }) {
   return (
     <ul>
       {tabTasks.map((task, index) => {
-        console.log("task :", task);
         const newTabTasks = [...tabTasks]; // copie of tabTasks (array)
         const newObjTask = { ...task }; // copie of task (object)
 

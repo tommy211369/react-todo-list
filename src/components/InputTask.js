@@ -12,7 +12,7 @@ export default function InputTask({
     setNewTask(e.target.value);
   };
 
-  const handleAddTask = async (e) => {
+  const handleAddTask = (e) => {
     e.preventDefault();
     if (newTask) {
       const newTabTasks = [...tabTasks];
@@ -25,12 +25,12 @@ export default function InputTask({
       setTabTasks(newTabTasks);
       setNewTask("");
 
-      try {
-        const response = await axios.post("http://localhost:4000/tasks", data);
-        console.log(response);
-      } catch (error) {
-        alert(`${error} \nServeur en test`);
-      }
+      // try {
+      //   const response = await axios.post("http://localhost:4000/tasks", data);
+      //   console.log(response);
+      // } catch (error) {
+      //   alert(`${error} \nServeur en test`);
+      // }
     }
   };
 
