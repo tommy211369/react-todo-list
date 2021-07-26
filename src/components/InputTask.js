@@ -12,7 +12,7 @@ export default function InputTask({
     setNewTask(e.target.value);
   };
 
-  const handleAddTask = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (newTask) {
       const newTabTasks = [...tabTasks];
@@ -36,14 +36,14 @@ export default function InputTask({
 
   return (
     <div className="input-text">
-      <form onSubmit={handleAddTask}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Enter a task"
           value={newTask}
           onChange={handleTextInput}
         />
-        <button onClick={handleAddTask}>Add Task</button>
+        <button onClick={handleSubmit}>Add Task</button>
       </form>
     </div>
   );
