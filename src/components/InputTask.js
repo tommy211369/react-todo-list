@@ -39,7 +39,7 @@ export default function InputTask({
       <form onSubmit={handleAddTask}>
         <input
           type="text"
-          placeholder="new task"
+          placeholder="Enter a task"
           value={newTask}
           onChange={handleTextInput}
         />
